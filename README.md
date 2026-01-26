@@ -4,7 +4,8 @@ PyP100 is a Python library for controlling TP-Link Tapo smart devices including 
 
 **Compatibility:** Supports firmware version 1.2 and above with automatic fallback to older authentication methods.
 
-> **Important:** For firmware 1.4.0 and above, you must enable "Third-Party Compatibility" in the Tapo app.
+> [!IMPORTANT]
+> For firmware 1.4.0 and above, you must enable "Third-Party Compatibility" in the Tapo app.
 >
 > Go to: **Me > Third-Party Services > Third-Party Compatibility** and toggle it on.
 
