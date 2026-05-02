@@ -1,6 +1,6 @@
 # PyP100
 
-This fork of the PyP100 is cutdown exclude anything to do with Tapo lights and is dedicated to using the P series plugs and more specifically to publish onto a MQTT broker for collection to a time series database. 
+This fork of the PyP100 is cutdown exclude anything to do with Tapo lights and is dedicated to using the P series plugs in the efforts of size and simplicity.
 
 PyP100 is a Python library for controlling TP-Link Tapo smart devices including P100, P105, P110 plugs.
 
