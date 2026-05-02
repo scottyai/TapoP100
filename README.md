@@ -1,6 +1,8 @@
 # PyP100
 
-PyP100 is a Python library for controlling TP-Link Tapo smart devices including P100, P105, P110 plugs and L530, L510E bulbs.
+This fork of the PyP100 is cutdown exclude anything to do with Tapo lights and is dedicated to using the P series plugs and more specifically to publish onto a MQTT broker for collection to a time series database. 
+
+PyP100 is a Python library for controlling TP-Link Tapo smart devices including P100, P105, P110 plugs.
 
 **Compatibility:** Supports firmware version 1.2 and above with automatic fallback to older authentication methods.
 
@@ -14,12 +16,12 @@ PyP100 is a Python library for controlling TP-Link Tapo smart devices including 
 PyP100 can be installed using the package manager [pip](https://pip.pypa.io/en/stable/).
 
 ```bash
-pip install git+https://github.com/almottier/TapoP100.git@main
+pip install git+https://github.com/scottyai/TapoP100.git@main
 ```
 
 > **Note:** If you previously installed PyP100 from another source, use `--force-reinstall` to ensure you get this version:
 > ```bash
-> pip install --force-reinstall git+https://github.com/almottier/TapoP100.git@main
+> pip install --force-reinstall git+https://github.com/scottyai/TapoP100.git@main
 > ```
 
 ## Usage
@@ -53,19 +55,6 @@ from PyP100 import PyP100
 
 p100 = PyP100.P100("192.168.X.X", "email@gmail.com", "Password123",
                    preferred_protocol="old")  # Creates a P100 plug object using the old authentication method only
-```
-
-#### Bulbs - L530, L510E etc.
-
-```python
-from PyP100 import PyL530
-
-l530 = PyL530.L530("192.168.X.X", "email@gmail.com", "Password123")
-
-# All the bulbs have the same basic functions as the plugs and additionally allow for the following functions.
-l530.setBrightness(50)  # Sets the brightness of the connected bulb to 50% brightness
-l530.setColorTemp(2700)  # Sets the color temperature of the connected bulb to 2700 Kelvin (Warm White)
-l530.setColor(30, 80)  # Sets the color of the connected bulb to Hue: 30°, Saturation: 80% (Orange)
 ```
 
 #### Energy Monitoring - P110
