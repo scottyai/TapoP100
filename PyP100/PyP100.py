@@ -110,6 +110,15 @@ class Switchable(Device):
 class Metering(Device):
     def getEnergyUsage(self) -> dict:
         return self.request("get_energy_usage")
+    
+    def getCurrentPower(self) -> int:
+        return self.request("get_current_power")
+    
+    def getCurrentVoltage(self) -> int:
+        return self.request("get_current_voltage")
+    
+    def getDeviceUsage(self) -> dict:
+        return self.request("get_device_usage")
 
     def getEnergyData(self, start_timestamp: int, end_timestamp: int, interval: MeasureInterval) -> dict:
         """Hours are always ignored, start is rounded to midnight, first day of month or first of January based on interval"""
