@@ -35,9 +35,7 @@ class Device:
                     protocol.Initialize()
                     self.protocol = protocol
                 except:
-                    log.exception(
-                        f"Failed to initialize protocol {protocol_class.__name__}"
-                    )
+                    log.exception(f"Failed to initialize protocol {protocol_class.__name__}")
         if not self.protocol:
             raise Exception("Failed to initialize protocol")
 
@@ -113,10 +111,18 @@ class Metering(Device):
     
     def getCurrentPower(self) -> int:
         return self.request("get_current_power")
-    
-    def getCurrentVoltage(self) -> int:
-        return self.request("get_current_voltage")
-    
+
+    def getRealtime(self) -> dict:
+        """
+         Returns a dictinary of real-time data, example data:
+            {'data': [{'current_ma': 49,
+                        'voltage_mv': 240253, 
+                        'power_mw': 1958, 
+                        'total_wh': 260, 
+                        'total_mwh': 260093}]}
+        """
+        return self.request("get_realtime")
+
     def getDeviceUsage(self) -> dict:
         return self.request("get_device_usage")
 
