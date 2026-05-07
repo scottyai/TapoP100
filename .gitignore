@@ -4,3 +4,4 @@ dist/
 PyP100.egg-info/
 build/
 .venv/
+test.py
