@@ -79,6 +79,10 @@ Please submit a pull request or open an issue for any changes.
 
 Thanks to [OctoPrint-PSUControl-Tapo](https://github.com/dswd/OctoPrint-PSUControl-Tapo) project.
 
+## Developer Resources
+
+[TP Link unoffical API](https://github.com/softScheck/tplink-smartplug/blob/master/tplink-smarthome-commands.txt)
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
